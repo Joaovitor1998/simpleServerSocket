@@ -1,18 +1,12 @@
-## Getting Started
+## Socket
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This is a simple-yet-to-finish threaded Server/Client Socket. It was built for studying purposes.
 
-## Folder Structure
+## File Structure
 
-The workspace contains two folders by default, where:
+It contains four files, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Server.java: this file is used to receive a new Client Socket and create a new ServerThread.
+- Client.java: this file is used to create a new Client Socket. It waits for the Client to write a new message to be sent to the Server.
+- ServerThread.java: this file is used to supply a 'new Server' (Threading) for each new Client Socket. It keeps listening for any new Client message and then send it to all the others Client.
+- ClientInputThread.java: this file is used to supply a 'background' InputStream for each Client Socket. It keeps wating for any new message sent by an other Client through the server.
